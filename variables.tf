@@ -9,3 +9,10 @@ variable "project_name" {
   type        = string
   default     = "eks-hello-world"
 }
+
+variable "availability_zones" {
+  description = "List of availability zones for the VPC."
+  type        = list(string)
+  default     = ["us-east-1a", "us-east-1b"]
+  
+}
