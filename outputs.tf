@@ -1,0 +1,1 @@
+// outputs.tf (Exemplo inicial mínimo - pode ficar vazio por enquanto)
