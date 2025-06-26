@@ -69,8 +69,9 @@ resource "aws_eks_cluster" "main" {
   role_arn = aws_iam_role.cluster.arn
 
   vpc_config {
-    subnet_ids = var.private_subnet_ids
-    # As sub-redes privadas são suficientes para o control plane e os nós.
+    subnet_ids              = concat(var.private_subnet_ids, var.public_subnet_ids)
+    endpoint_private_access = true
+    endpoint_public_access  = true
   }
 
   depends_on = [
