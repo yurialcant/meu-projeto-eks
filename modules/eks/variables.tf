@@ -25,6 +25,12 @@ variable "private_subnet_ids" {
   type        = list(string)
 }
 
+variable "public_subnet_ids" {
+  description = "List of public subnet IDs for the cluster control plane."
+  type        = list(string)
+  default     = []
+}
+
 variable "instance_types" {
   description = "List of EC2 instance types for the node group."
   type        = list(string)
